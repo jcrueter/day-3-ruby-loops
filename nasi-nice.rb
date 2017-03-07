@@ -19,3 +19,22 @@ ingredients = [
   { name: 'bumbu', quantity: 3 },
   { name: 'sambal', quantity: "jar" }
   ]
+puts "*** Let's make a lot of Nasi for the guys! ***"
+print_divider
+puts "You need the following ingredients:"
+ingredients.each do |ingredient|
+  puts "#{ingredient[:name]}, #{ingredient[:quantity]}"
+end
+loop do
+  puts "\n"
+  print_divider
+  puts "Do you have all the ingredients you need?"
+  answer = gets.chomp.upcase
+  if answer == 'N'
+    puts "You need to go shopping!"
+    print_progress_bar
+  elsif answer == 'Y'
+    puts "Let's start cooking!"
+  else puts "That is not a valid input, so try again."
+  end
+end
