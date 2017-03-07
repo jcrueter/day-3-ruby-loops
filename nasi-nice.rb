@@ -100,4 +100,5 @@ steps.each_with_index do |step, index|
   end
   send(step[:action])
 end
-  
+print_divider
+puts "Finito! Enjoy."
