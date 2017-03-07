@@ -35,6 +35,7 @@ loop do
     print_progress_bar
   elsif answer == 'Y'
     puts "Let's start cooking!"
+    break
   else puts "That is not a valid input, so try again."
   end
 end
